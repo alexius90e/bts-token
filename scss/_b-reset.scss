@@ -1,0 +1,32 @@
+html {
+  color: $black;
+  font-size: 1rem;
+  font-family: 'Segoe UI', Verdana, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  overflow-y: scroll;
+  color: $white;
+  background-color: $black;
+}
+
+a {
+  color: $white;
+  text-decoration: none;
+}
+
+a,
+button,
+input,
+textarea {
+  font-family: 'Segoe UI', Verdana, sans-serif;
+}
+
+figure {
+  margin: 0;
+}

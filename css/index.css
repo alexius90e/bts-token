@@ -1,0 +1,66 @@
+html {
+  color: #06081C;
+  font-size: 1rem;
+  font-family: "Segoe UI", Verdana, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  overflow-y: scroll;
+  color: #ffffff;
+  background-color: #06081C;
+}
+
+a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+a,
+button,
+input,
+textarea {
+  font-family: "Segoe UI", Verdana, sans-serif;
+}
+
+figure {
+  margin: 0;
+}
+
+.container {
+  max-width: 1360px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.header__burger-btn {
+  display: none;
+  width: 43px;
+  height: 43px;
+  padding: 0;
+  border: none;
+  border-radius: 50px;
+  background-color: #ffffff;
+  background-image: url(../assets/icons/menu.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 17px;
+  -webkit-transition: all ease-in-out 0.15s;
+  transition: all ease-in-out 0.15s;
+}
+@media (max-width: 992px) {
+  .header__burger-btn {
+    display: inline-block;
+  }
+}
+.header__burger-btn:hover {
+  background-color: #72934c;
+}
+.header__burger-btn:active {
+  background-color: #72934c;
+}
