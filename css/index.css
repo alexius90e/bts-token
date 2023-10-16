@@ -1,7 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Gothic+A1:wght@300;400;500;600;700;800;900&display=swap");
 html {
   color: #06081C;
   font-size: 1rem;
-  font-family: "Segoe UI", Verdana, sans-serif;
+  font-family: "Gothic A1", "Segoe UI", sans-serif;
   font-weight: 400;
   font-style: normal;
   scroll-behavior: smooth;
@@ -87,7 +88,6 @@ img {
 }
 .header__nav-link {
   color: #fff;
-  font-family: Euclid Circular A;
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
@@ -99,7 +99,6 @@ img {
   border-radius: 12px;
   border: none;
   color: #ffffff;
-  font-family: Euclid Circular A;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -149,8 +148,95 @@ img {
   display: none;
 }
 
-.advantages {
-  display: none;
+.advantages__title {
+  margin: 0 0 24px;
+  color: #ffffff;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 111%;
+}
+@media (max-width: 768px) {
+  .advantages__title {
+    font-size: 20px;
+  }
+}
+.advantages__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 44px;
+}
+@media (max-width: 1200px) {
+  .advantages__list {
+    gap: 24px;
+  }
+}
+.advantages__card {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 30%;
+          flex: 1 1 30%;
+}
+@media (max-width: 768px) {
+  .advantages__card {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 calc(50% - 12px);
+            flex: 0 1 calc(50% - 12px);
+  }
+}
+@media (max-width: 576px) {
+  .advantages__card {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
+  }
+}
+.advantages__card-image {
+  margin: 0 0 24px;
+  padding: 0;
+}
+@media (max-width: 768px) {
+  .advantages__card-image {
+    text-align: center;
+  }
+}
+.advantages__card-image img {
+  width: 210px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+@media (max-width: 1200px) {
+  .advantages__card-image img {
+    width: 180px;
+  }
+}
+@media (max-width: 768px) {
+  .advantages__card-image img {
+    width: 150px;
+  }
+}
+.advantages__card-text {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+@media (max-width: 768px) {
+  .advantages__card-text {
+    font-size: 16px;
+  }
+}
+@media (max-width: 576px) {
+  .advantages__card-text {
+    font-size: 14px;
+  }
 }
 
 .how-to-get {

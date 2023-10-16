@@ -1,3 +1,77 @@
 .advantages {
-  display: none;
+  &__title {
+    margin: 0 0 24px;
+    color: $white;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 111%;
+
+    @include tablet {
+      font-size: 20px;
+    }
+
+  }
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 44px;
+
+    @include desktop {
+      gap: 24px;
+    }
+  }
+
+  &__card {
+    flex: 1 1 30%;
+
+    @include tablet {
+      flex: 0 1 calc(50% - 12px);
+    }
+
+    @include mobile {
+      flex: 1 1 100%;
+    }
+
+    &-image {
+      margin: 0 0 24px;
+      padding: 0;
+
+      @include tablet {
+        text-align: center;
+      }
+
+      & img {
+        width: 210px;
+        object-fit: contain;
+
+        @include desktop {
+          width: 180px;
+        }
+
+        @include tablet {
+          width: 150px;
+        }
+      }
+    }
+
+    &-text {
+      margin: 0;
+      color: rgba(255, 255, 255, 0.75);
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: normal;
+
+      @include tablet {
+        font-size: 16px;
+      }
+
+      @include mobile {
+        font-size: 14px;
+      }
+    }
+  }
 }
