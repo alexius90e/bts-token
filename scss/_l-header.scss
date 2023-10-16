@@ -1,36 +1,90 @@
 .header {
-  & .logo {
+  padding: 25px 0;
+
+  @include tablet {
+    padding: 16px 0;
+  }
+
+  & .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    & a {
+      color: $white;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 24px;
+    }
   }
 
   &__nav {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+
+    @include tablet {
+      display: none;
+    }
+
     &-link {
+      color: #fff;
+      font-family: Euclid Circular A;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+    }
+
+    &-button {
+      padding: 15px 24px;
+      margin: 0;
+      border-radius: 12px;
+      border: none;
+      color: $white;
+      font-family: Euclid Circular A;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      outline: none;
+      background: $black900;
     }
   }
 
   &__burger-btn {
     display: none;
-    width: 43px;
-    height: 43px;
+    width: 40px;
+    height: 40px;
     padding: 0;
     border: none;
-    border-radius: 50px;
-    background-color: $white;
-    background-image: url(../assets/icons/menu.svg);
+    background-color: rgba($color: $white, $alpha: 0);
+    background-image: url(../assets/icons/menu-alt.svg);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 17px;
+    background-size: 36px;
     transition: $baseTransition;
+    cursor: pointer;
 
-    @include laptop {
+    @include tablet {
       display: inline-block;
     }
 
+    @include mobile {
+      width: 32px;
+      height: 32px;
+      background-size: 30px;
+    }
+
     &:hover {
-      background-color: #72934c;
+      transform: scale(1.1);
     }
 
     &:active {
-      background-color: #72934c;
+      transform: scale(1);
     }
   }
 }
