@@ -1,3 +1,247 @@
 .first-screen {
-  display: none;
+  margin: 0 0 88px;
+
+  @include laptop {
+    margin: 0 0 58px;
+  }
+
+  & .container {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+
+    @include laptop {
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    @include tablet {
+      gap: 32px;
+    }
+
+    @include mobile {
+      gap: 24px;
+    }
+  }
+
+  &__info {
+    flex: 1 1 552px;
+
+    @include laptop {
+      flex: 0 1 auto;
+      order: 1;
+    }
+  }
+
+  &__title {
+    margin: 32px 0 24px;
+    color: $white;
+    font-size: 52px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 111%;
+
+    @include laptop {
+      max-width: 768px;
+      margin: 32px auto 24px;
+      text-align: center;
+    }
+
+    @include tablet {
+      margin: 24px auto 16px;
+      font-size: 44px;
+    }
+
+    @include mobile {
+      font-size: 32px;
+    }
+  }
+
+  &__text {
+    color: $white;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+
+    @include laptop {
+      max-width: 768px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    @include tablet {
+      font-size: 16px;
+    }
+
+    @include mobile {
+      font-size: 14px;
+    }
+
+    &_top {
+      padding-left: 16px;
+
+      @include laptop {
+        padding: 0;
+      }
+    }
+  }
+
+  &__buttons {
+    margin-top: 24px;
+
+    @include laptop {
+      text-align: center;
+    }
+  }
+
+  &__offer {
+    position: relative;
+    flex: 1 1 658px;
+    padding: 0 0 90px;
+
+    @include laptop {
+      flex: 0 1 auto;
+      order: 0;
+    }
+
+    &-image {
+      text-align: center;
+
+      img {
+        max-width: 658px;
+        width: 100%;
+        height: auto;
+
+        @include laptop {
+          max-width: 560px;
+        }
+      }
+    }
+
+    &-block {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      max-width: 520px;
+      padding: 35px 24px;
+      margin: 0 auto;
+      border-radius: 48px;
+      border: 1px solid #3b37ff;
+      background: rgba(255, 255, 255, 0.03);
+      backdrop-filter: blur(28px);
+
+      @include tablet {
+        padding: 32px 18px;
+        border-radius: 24px;
+      }
+
+      @include mobile {
+        padding: 24px 14px;
+        border-radius: 24px;
+      }
+    }
+
+    &-title {
+      margin: 0;
+      color: $white;
+      font-size: 26px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 111%;
+      text-align: center;
+
+      @include tablet {
+        font-size: 22px;
+      }
+
+      @include mobile {
+        font-size: 16px;
+      }
+
+      & span {
+        font-weight: 800;
+      }
+    }
+
+    &-progress {
+      position: relative;
+
+      &-bar {
+        position: relative;
+        height: 12px;
+        width: 100%;
+        border-radius: 32px;
+
+        background: rgba(255, 255, 255, 0.15);
+        border: 1px solid rgba(255, 255, 255, 0.25);
+
+        &::before {
+          top: 0px;
+          content: '';
+          position: absolute;
+          top: 0px;
+          bottom: 0px;
+          left: 0px;
+          display: block;
+          height: 100%;
+          width: 90%;
+          border-radius: 32px;
+          background: #3b37ff;
+        }
+      }
+
+      &-text {
+        padding: 20px 0;
+        padding-right: 86px;
+        color: rgba($color: $white, $alpha: 0.75);
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+
+        @include tablet {
+          font-size: 16px;
+          line-height: 16px;
+        }
+
+        @include mobile {
+          padding: 14px 0;
+          padding-right: 40px;
+          font-size: 12px;
+          line-height: 12px;
+        }
+      }
+
+      &-label {
+        position: absolute;
+        bottom: 32px;
+        right: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: fit-content;
+        padding: 4px 8px 2px;
+        color: $white;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 20px;
+        border-radius: 36px;
+        background: #1b45f5;
+
+        @include tablet {
+          font-size: 16px;
+          line-height: 16px;
+        }
+
+        @include mobile {
+          bottom: 26px;
+          font-size: 12px;
+          line-height: 12px;
+        }
+      }
+    }
+  }
 }

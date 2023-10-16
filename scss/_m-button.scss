@@ -1,1 +1,16 @@
-.button {}
+.button {
+  padding: 12px 24px;
+  color: #fff;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(0deg, #1b45f5 0%, #163dda 100%);
+  cursor: pointer;
+
+  :hover {
+    background: linear-gradient(0deg, #163dda 0%, #1b45f5 100%);
+  }
+}
