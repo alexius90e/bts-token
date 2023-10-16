@@ -46,13 +46,16 @@ img {
   line-height: 20px;
   border: none;
   border-radius: 12px;
-  background: -webkit-gradient(linear, left bottom, left top, from(#1b45f5), to(#163dda));
-  background: linear-gradient(0deg, #1b45f5 0%, #163dda 100%);
+  background-color: #1b45f5;
+  -webkit-transition: all ease-in-out 0.15s;
+  transition: all ease-in-out 0.15s;
   cursor: pointer;
 }
-.button :hover {
-  background: -webkit-gradient(linear, left bottom, left top, from(#163dda), to(#1b45f5));
-  background: linear-gradient(0deg, #163dda 0%, #1b45f5 100%);
+.button:hover {
+  background-color: #1639c8;
+}
+.button:active {
+  background-color: #1330a1;
 }
 
 .container {
@@ -548,5 +551,194 @@ img {
 }
 
 .opportunity {
-  display: none;
+  padding: 212px 0 202px;
+}
+@media (max-width: 992px) {
+  .opportunity {
+    padding: 180px 0 180px;
+  }
+}
+@media (max-width: 768px) {
+  .opportunity {
+    padding: 150px 0 150px;
+  }
+}
+@media (max-width: 576px) {
+  .opportunity {
+    padding: 120px 0 120px;
+  }
+}
+.opportunity__title {
+  margin: 0 0 8px;
+  color: #ffffff;
+  font-size: 72px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 111%;
+  text-align: center;
+}
+@media (max-width: 992px) {
+  .opportunity__title {
+    font-size: 64px;
+  }
+}
+@media (max-width: 768px) {
+  .opportunity__title {
+    font-size: 50px;
+    margin: 0 0 24px;
+  }
+}
+@media (max-width: 576px) {
+  .opportunity__title {
+    font-size: 40px;
+  }
+}
+.opportunity__title_secondary {
+  margin: 0 0 12px;
+  color: #ffffff;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 111%;
+  text-align: center;
+}
+@media (max-width: 992px) {
+  .opportunity__title_secondary {
+    font-size: 30px;
+  }
+}
+@media (max-width: 768px) {
+  .opportunity__title_secondary {
+    font-size: 26px;
+  }
+}
+@media (max-width: 576px) {
+  .opportunity__title_secondary {
+    font-size: 24px;
+  }
+}
+.opportunity__text {
+  margin: 0 auto 56px;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  text-align: center;
+}
+@media (max-width: 992px) {
+  .opportunity__text {
+    margin: 0 auto 50px;
+    font-size: 18px;
+  }
+}
+@media (max-width: 768px) {
+  .opportunity__text {
+    margin: 0 auto 44px;
+    font-size: 16px;
+  }
+}
+@media (max-width: 576px) {
+  .opportunity__text {
+    margin: 0 auto 32px;
+    font-size: 13px;
+  }
+}
+.opportunity__text_marked {
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  padding: 8px 16px 4px;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  text-align: center;
+  border-radius: 36px;
+  background: #3b37ff;
+}
+@media (max-width: 992px) {
+  .opportunity__text_marked {
+    font-size: 18px;
+  }
+}
+@media (max-width: 768px) {
+  .opportunity__text_marked {
+    font-size: 16px;
+  }
+}
+@media (max-width: 576px) {
+  .opportunity__text_marked {
+    font-size: 13px;
+  }
+}
+.opportunity__buttons {
+  margin: 12px 0 0;
+  text-align: center;
+}
+.opportunity .button {
+  position: relative;
+  padding: 24px 36px;
+  text-align: center;
+}
+.opportunity .button::before {
+  content: "";
+  position: absolute;
+  top: 24px;
+  left: -104px;
+  display: block;
+  width: 100px;
+  height: 100px;
+  background-image: url(../assets/arrow-left.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-transition: all ease-in-out 0.2s;
+  transition: all ease-in-out 0.2s;
+  background-size: cover;
+}
+@media (max-width: 576px) {
+  .opportunity .button::before {
+    left: -72px;
+    width: 70px;
+    height: 70px;
+  }
+}
+.opportunity .button:hover::before {
+  -webkit-transform: rotate(12deg) scale(0.95) translateX(6px);
+      -ms-transform: rotate(12deg) scale(0.95) translateX(6px);
+          transform: rotate(12deg) scale(0.95) translateX(6px);
+}
+.opportunity .button::after {
+  content: "";
+  position: absolute;
+  top: 37px;
+  right: -100px;
+  display: block;
+  width: 100px;
+  height: 100px;
+  background-image: url(../assets/arrow-right.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  -webkit-transition: all ease-in-out 0.2s;
+  transition: all ease-in-out 0.2s;
+}
+@media (max-width: 576px) {
+  .opportunity .button::after {
+    top: 30px;
+    right: -70px;
+    width: 70px;
+    height: 70px;
+  }
+}
+.opportunity .button:hover::after {
+  -webkit-transform: rotate(-16deg) scale(0.95) translateY(-12px);
+      -ms-transform: rotate(-16deg) scale(0.95) translateY(-12px);
+          transform: rotate(-16deg) scale(0.95) translateY(-12px);
+}
+@media (max-width: 576px) {
+  .opportunity .button:hover::after {
+    -webkit-transform: rotate(-16deg) scale(0.95) translateY(-6px);
+        -ms-transform: rotate(-16deg) scale(0.95) translateY(-6px);
+            transform: rotate(-16deg) scale(0.95) translateY(-6px);
+  }
 }

@@ -1,19 +1,174 @@
 .opportunity {
-  display: none;
+  padding: 212px 0 202px;
+
+  @include laptop {
+    padding: 180px 0 180px;
+  }
+
+  @include tablet {
+    padding: 150px 0 150px;
+  }
+
+  @include mobile {
+    padding: 120px 0 120px;
+  }
 
   &__title {
+    margin: 0 0 8px;
+    color: $white;
+    font-size: 72px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 111%;
+    text-align: center;
+
+    @include laptop {
+      font-size: 64px;
+    }
+
+    @include tablet {
+      font-size: 50px;
+      margin: 0 0 24px;
+    }
+
+    @include mobile {
+      font-size: 40px;
+    }
+
     &_secondary {
+      margin: 0 0 12px;
+      color: $white;
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 111%;
+      text-align: center;
+
+      @include laptop {
+        font-size: 30px;
+      }
+
+      @include tablet {
+        font-size: 26px;
+      }
+
+      @include mobile {
+        font-size: 24px;
+      }
     }
   }
 
   &__text {
+    margin: 0 auto 56px;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    text-align: center;
+
+    @include laptop {
+      margin: 0 auto 50px;
+      font-size: 18px;
+    }
+
+    @include tablet {
+      margin: 0 auto 44px;
+      font-size: 16px;
+    }
+
+    @include mobile {
+      margin: 0 auto 32px;
+      font-size: 13px;
+    }
+
     &_marked {
+      max-width: max-content;
+      padding: 8px 16px 4px;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: normal;
+      text-align: center;
+      border-radius: 36px;
+      background: #3b37ff;
+
+      @include laptop {
+        font-size: 18px;
+      }
+
+      @include tablet {
+        font-size: 16px;
+      }
+
+      @include mobile {
+        font-size: 13px;
+      }
     }
   }
 
   &__buttons {
+    margin: 12px 0 0;
+    text-align: center;
   }
 
-  &__button {
+  & .button {
+    position: relative;
+    padding: 24px 36px;
+    text-align: center;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 24px;
+      left: -104px;
+      display: block;
+      width: 100px;
+      height: 100px;
+      background-image: url(../assets/arrow-left.png);
+      background-repeat: no-repeat;
+      background-position: center;
+      transition: all ease-in-out 0.2s;
+      background-size: cover;
+
+      @include mobile {
+        left: -72px;
+        width: 70px;
+        height: 70px;
+      }
+    }
+
+    &:hover::before {
+      transform: rotate(12deg) scale(0.95) translateX(6px);
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 37px;
+      right: -100px;
+      display: block;
+      width: 100px;
+      height: 100px;
+      background-image: url(../assets/arrow-right.png);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      transition: all ease-in-out 0.2s;
+
+      @include mobile {
+        top: 30px;
+        right: -70px;
+        width: 70px;
+        height: 70px;
+      }
+    }
+
+    &:hover::after {
+      transform: rotate(-16deg) scale(0.95) translateY(-12px);
+
+      @include mobile {
+        transform: rotate(-16deg) scale(0.95) translateY(-6px);
+      }
+    }
   }
 }
