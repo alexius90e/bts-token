@@ -64,6 +64,11 @@
 
     &-link {
       display: inline-block;
+      transition: $baseTransition;
+
+      &:hover {
+        transform: scale(1.15);
+      }
 
       @include laptop {
         flex: 0 0 45%;
@@ -134,15 +139,25 @@
     }
 
     &-link {
-      color: rgba(255, 255, 255, 0.5);
+      color: rgba($white, 0.5);
       font-size: 16px;
       font-style: normal;
       font-weight: 300;
       line-height: 162.5%;
+      transition: $baseTransition;
 
       @include tablet {
         font-size: 14px;
       }
+
+      &:hover {
+        color: $white;
+      }
+
+      &:active {
+        color: rgba($white, 0.3);
+      }
+
 
       &_region {
         padding-left: 16px;
@@ -187,17 +202,16 @@
       gap: 16px;
     }
 
-    @include tablet{
+    @include tablet {
       font-size: 14px;
     }
 
     &-excluded {
       max-width: 740px;
 
-      @include tablet{
+      @include tablet {
         max-width: none;
       }
     }
-
   }
 }

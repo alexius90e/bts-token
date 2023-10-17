@@ -1,3 +1,111 @@
 .how-to-get {
-  display: none;
+  position: relative;
+  padding: 41px 0 0;
+
+  &::before {
+    content: '';
+    position: absolute;
+    height: 30%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 5;
+    background: linear-gradient(0deg, $black 5%, rgba($black, 0) 100%);
+  }
+
+  &__title {
+    margin: 0 0 36px;
+    color: #fff;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 111%;
+    text-align: center;
+
+    @include tablet {
+      font-size: 28px;
+    }
+
+    @include tablet {
+      font-size: 24px;
+    }
+  }
+
+  &__list {
+    max-height: 800px;
+    overflow: hidden;
+
+    @include desktop {
+      max-height: 700px;
+    }
+
+    @include laptop {
+      max-height: 500px;
+    }
+
+    @include mobile {
+      max-height: 320px;
+    }
+
+    &-wrapper {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+
+      @include tablet {
+        gap: 8px;
+      }
+
+      @include mobile {
+        gap: 4px;
+      }
+    }
+  }
+
+  &__image {
+    margin: 0;
+    padding: 0;
+
+    & img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    &_second {
+      position: relative;
+      top: 48px;
+
+      @include tablet {
+        top: 36px;
+      }
+
+      @include mobile {
+        top: 24px;
+      }
+    }
+  }
+
+  &__divider {
+    flex: 0 0 auto;
+    width: 64px;
+    border-radius: 144px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    background: url(../assets/icons/arrow-right.svg) no-repeat center;
+    background-size: 60%;
+    aspect-ratio: 1;
+
+    @include laptop {
+      width: 48px;
+    }
+
+    @include tablet {
+      width: 24px;
+    }
+
+    @include mobile {
+      width: 16px;
+    }
+  }
 }
