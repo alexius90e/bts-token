@@ -1,3 +1,203 @@
 .footer {
+  padding: 36px 0 30px;
 
+  &__info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 48px;
+    margin: 0 0 48px;
+
+    @include tablet {
+      gap: 24px;
+    }
+
+    @include mobile {
+      flex-direction: column;
+      gap: 16px;
+      margin: 0 0 32px;
+    }
+
+    &-wrapper {
+      max-width: 930px;
+    }
+  }
+
+  &__title {
+    margin: 0 0 8px;
+    color: #fff;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 135%;
+
+    @include tablet {
+      font-size: 16px;
+    }
+  }
+
+  &__text {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  &__social {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+
+    @include laptop {
+      flex: 0 0 110px;
+    }
+
+    @include mobile {
+      flex: 1 1 100%;
+      width: 100%;
+      justify-content: flex-start;
+    }
+
+    &-link {
+      display: inline-block;
+
+      @include laptop {
+        flex: 0 0 45%;
+        max-width: 48px;
+      }
+
+      @include tablet {
+        flex: 0 1 auto;
+        max-width: none;
+      }
+
+      & img {
+        max-width: 48px;
+        object-fit: cover;
+
+        @include tablet {
+          max-width: 40px;
+        }
+
+        @include mobile {
+          max-width: 32px;
+        }
+      }
+    }
+  }
+
+  &__nav {
+    display: flex;
+    gap: 72px;
+    margin: 0 0 44px;
+
+    @include laptop {
+      gap: 48px;
+    }
+
+    @include tablet {
+      gap: 24px;
+      margin: 0 0 32px;
+    }
+
+    @include mobile {
+      flex-wrap: wrap;
+      gap: 32px 16px;
+    }
+
+    &-block {
+      flex: 0 1 auto;
+
+      @include tablet {
+        flex: 1 1 25%;
+      }
+
+      @include mobile {
+        flex: 1 1 45%;
+      }
+    }
+
+    &-links {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin: 20px 0 0;
+
+      @include tablet {
+        gap: 8px;
+        margin: 12px 0 0;
+      }
+    }
+
+    &-link {
+      color: rgba(255, 255, 255, 0.5);
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: 162.5%;
+
+      @include tablet {
+        font-size: 14px;
+      }
+
+      &_region {
+        padding-left: 16px;
+        background: no-repeat left center;
+        background-size: 12px;
+
+        &_us {
+          background-image: url(../assets/countries/unitedstates.svg);
+        }
+
+        &_ru {
+          background-image: url(../assets/countries/russia.svg);
+        }
+
+        &_ch {
+          background-image: url(../assets/countries/china.svg);
+        }
+
+        &_tr {
+          background-image: url(../assets/countries/turkey.svg);
+        }
+
+        &_ko {
+          background-image: url(../assets/countries/southkorea.svg);
+        }
+      }
+    }
+  }
+
+  &__copyrights {
+    display: flex;
+    justify-content: space-between;
+    gap: 32px;
+    color: rgba(255, 255, 255, 0.25);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+    @include laptop {
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    @include tablet{
+      font-size: 14px;
+    }
+
+    &-excluded {
+      max-width: 740px;
+
+      @include tablet{
+        max-width: none;
+      }
+    }
+
+  }
 }
