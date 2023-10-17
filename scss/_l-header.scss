@@ -1,9 +1,14 @@
 .header {
   position: relative;
   padding: 25px 0;
+  background-image: url(../assets/gradients/gradient-3.svg);
+  background-repeat: no-repeat;
+  background-position: top -300px left -230px;
+  background-size: 500px;
 
   @include tablet {
     padding: 16px 0;
+    background-position: top -320px left -230px;
   }
 
   & .container {
@@ -58,6 +63,15 @@
       font-style: normal;
       font-weight: 500;
       line-height: normal;
+      transition: $baseTransition;
+
+      &:hover {
+        opacity: 0.85;
+      }
+
+      &:active {
+        opacity: 0.7;
+      }
     }
 
     &-button {
@@ -72,6 +86,16 @@
       line-height: normal;
       outline: none;
       background: $black900;
+      transition: $baseTransition;
+      cursor: pointer;
+
+      &:hover {
+        background: #24294a;
+      }
+
+      &:active {
+        opacity: 0.75;
+      }
     }
   }
 

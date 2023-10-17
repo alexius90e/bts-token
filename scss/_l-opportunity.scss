@@ -1,4 +1,6 @@
 .opportunity {
+  position: relative;
+  overflow: hidden;
   padding: 212px 0 202px;
 
   @include laptop {
@@ -11,6 +13,80 @@
 
   @include mobile {
     padding: 120px 0 120px;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top: -400px;
+    left: -440px;
+    display: block;
+    width: 1379px;
+    height: 1499px;
+    background-image: url(../assets/gradients/gradient-5.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @include desktop {
+      left: -540px;
+    }
+
+    @include laptop {
+      background-size: 650px;
+    }
+
+    @include tablet {
+      left: -600px;
+      background-size: 480px;
+    }
+
+    @include mobile {
+      left: -640px;
+      background-size: 320px;
+    }
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top: -170px;
+    right: -230px;
+    display: block;
+    width: 908px;
+    height: 1034px;
+    background-image: url(../assets/gradients/gradient-6.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @include desktop {
+      top: -170px;
+      right: -300px;
+      background-size: 400px;
+    }
+
+    @include laptop {
+      top: -220px;
+      right: -320px;
+      background-size: 320px;
+    }
+
+    @include tablet {
+      right: -370px;
+      background-size: 230px;
+    }
+
+    @include mobile {
+      top: -130px;
+      right: -380px;
+      background-size: 160px;
+    }
+  }
+
+  & .container {
+    position: relative;
+    z-index: 2;
   }
 
   &__title {
